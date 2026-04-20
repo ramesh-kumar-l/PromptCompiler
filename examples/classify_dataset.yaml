@@ -1,0 +1,24 @@
+name: classify_eval
+description: Evaluation cases for the sentiment classifier.
+
+cases:
+  - id: sent_001
+    input:
+      text: "I can't believe how amazing this experience was. Will definitely come back!"
+    expected_keywords:
+      - positive
+    tags: [positive]
+
+  - id: sent_002
+    input:
+      text: "The package arrived two days late but the contents were fine."
+    expected_keywords:
+      - neutral
+    tags: [neutral]
+
+  - id: sent_003
+    input:
+      text: "Worst service I've ever had. Complete waste of money."
+    expected_keywords:
+      - negative
+    tags: [negative]

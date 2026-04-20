@@ -1,0 +1,29 @@
+name: classify_sentiment
+version: "1.1"
+description: Classify the sentiment of a given text as positive, neutral, or negative.
+
+system: |
+  You are a sentiment analysis expert. Classify text into exactly one of: positive, neutral, negative.
+  Reply with only the label — no explanation.
+
+few_shot:
+  - input: "The product exceeded all my expectations. Absolutely love it!"
+    output: "positive"
+  - input: "It arrived on time and works as described."
+    output: "neutral"
+  - input: "Terrible quality. Broke after two days and support was useless."
+    output: "negative"
+
+user: |
+  Classify the sentiment of the following text:
+
+  "{{text}}"
+
+constraints:
+  max_tokens: 5
+  temperature: 0.0
+  model: gpt-4o-mini
+
+metadata:
+  task: sentiment-classification
+  labels: [positive, neutral, negative]

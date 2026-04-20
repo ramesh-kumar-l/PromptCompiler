@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install *)",
+      "Bash(python -m pytest tests/ -v)",
+      "Bash(python -m promptlang.cli.main compile examples/summarize.yaml --vars '{\"input_text\": \"Python is a high-level programming language known for readability and versatility.\", \"max_words\": \"20\"}' --show-ir)",
+      "Bash(python -c ' *)",
+      "Bash(python -c \"import sys; print\\(sys.stdin.buffer.read\\(\\).decode\\('utf-8', errors='replace'\\)\\)\")"
+    ]
+  }
+}

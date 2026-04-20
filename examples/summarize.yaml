@@ -1,0 +1,22 @@
+name: summarize
+version: "1.0"
+description: Summarize a piece of text with clear key points.
+
+system: |
+  You are an expert summarizer. Your summaries are concise, accurate, and highlight the most important points.
+  Always respond in plain prose without bullet points unless explicitly requested.
+
+user: |
+  Please summarize the following text. Focus on the main ideas and keep the summary under {{max_words}} words.
+
+  Text:
+  {{input_text}}
+
+constraints:
+  max_tokens: 300
+  temperature: 0.3
+  model: gpt-4o
+
+metadata:
+  author: promptlang-examples
+  task: summarization

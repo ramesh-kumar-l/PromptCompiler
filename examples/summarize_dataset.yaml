@@ -1,0 +1,56 @@
+name: summarize_eval
+description: Evaluation cases for the summarize prompt.
+
+cases:
+  - id: case_001
+    input:
+      input_text: >
+        The Amazon rainforest, often referred to as the "lungs of the Earth," produces about
+        20% of the world's oxygen and is home to an estimated 10% of all species on the planet.
+        Deforestation driven by agriculture, logging, and mining threatens this critical ecosystem.
+        Scientists warn that losing the Amazon could accelerate climate change globally,
+        disrupting weather patterns far beyond South America. Conservation efforts, including
+        international funding and Indigenous land rights protections, are seen as the most
+        effective countermeasures.
+      max_words: "60"
+    expected_keywords:
+      - Amazon
+      - deforestation
+      - climate
+    max_length: 80
+    min_length: 15
+    tags: [science, environment]
+
+  - id: case_002
+    input:
+      input_text: >
+        Python has become the dominant language for data science and machine learning due to
+        its readable syntax, extensive library ecosystem (NumPy, Pandas, PyTorch, scikit-learn),
+        and strong community support. Beginners find it accessible while experts appreciate
+        its versatility. Major tech companies and research institutions have standardized on
+        Python for AI workloads.
+      max_words: "50"
+    expected_keywords:
+      - Python
+      - data science
+      - machine learning
+    max_length: 70
+    min_length: 10
+    tags: [tech, programming]
+
+  - id: case_003
+    input:
+      input_text: >
+        Intermittent fasting has gained popularity as a dietary strategy where individuals
+        cycle between periods of eating and fasting. Studies suggest potential benefits
+        including weight loss, improved insulin sensitivity, and cellular repair processes.
+        However, long-term research remains limited and individual responses vary significantly.
+        Medical consultation is advised before starting any fasting regimen.
+      max_words: "55"
+    expected_keywords:
+      - fasting
+      - weight
+      - health
+    max_length: 75
+    min_length: 12
+    tags: [health]
